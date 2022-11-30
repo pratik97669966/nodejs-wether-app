@@ -2,8 +2,8 @@ const request = require('request');
 
 const geocode = (location, callback) => {
     const infoObj = {
-        url: 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(location) + '.json?access_token=pk.eyJ1IjoiZG1haGFqYW45OCIsImEiOiJjazQ5bnVxN24wNmN2M2xtNzJpaDYzcTR6In0.Kf-BciModMzcnFr04ug8xA&limit=1',
-        json: true
+        url: 'http://68.183.83.230:8765/userauth/users/sign-in/' + encodeURIComponent(location),
+        json: {  "requestedRole": "PATIENT"    }
     }
 
     request(infoObj, (error, { body }) => {
