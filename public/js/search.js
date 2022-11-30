@@ -2,7 +2,7 @@ const button = document.querySelector('.button');
 
 button.addEventListener('click', () => {
     const searchArea = document.querySelector('input').value;
-    const url = '' + encodeURIComponent(searchArea);
+    const url = 'http://68.183.83.230:8765/userauth/users/sign-in/' + encodeURIComponent(searchArea);
 
     fetch(url)
     .then(res => res.json())
