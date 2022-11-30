@@ -1,15 +1,21 @@
 {
-  "name": "weatherappnodejs",
+  "name": "node-fetch-app",
   "version": "1.0.0",
-  "description": "creating a weather nodejs app",
+  "description": "A responsive single page app fetcher for JSON into carousel structure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node index.js"
   },
-  "author": "thapa technical",
+  "author": "M. S. ElRakabawi",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ElRakabawi/node-fetch-app.git"
+  },
   "dependencies": {
-    "requests": "^0.3.0",
-    "dotenv": "^8.2.0"
+    "express": "*",
+    "express-handlebars": "^3.0.0",
+    "node-fetch": "^1.7.1"
   }
 }
