@@ -1,16 +1,21 @@
 {
-  "name": "web-server",
+  "name": "node-fetch-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A responsive single page app fetcher for JSON into carousel structure.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Q UP",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.0.6",
-    "request": "^2.88.0"
+    "express": "*",
+    "express-handlebars": "^3.0.0",
+    "node-fetch": "^1.7.1"
   }
 }
