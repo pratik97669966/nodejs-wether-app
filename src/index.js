@@ -17,7 +17,7 @@ const App = () => {
         <Route component={VerifyOTP} exact path="/verify-o-t-p" />
         <Route component={BookingScreen} exact path="/booking-screen" />
         <Route component={Login} exact path="/login" />
-        <Route component={Home} exact path="/" />
+        <Route component={Home} exact path="/:drName/:drId/:specality" />
       </div>
     </Router>
   )

@@ -6,10 +6,13 @@ import { Helmet } from 'react-helmet'
 import './sign-up.css'
 
 const SignUp = (props) => {
+  var drId =localStorage.getItem('drId');
+  var drName =localStorage.getItem('drName');
+  var specality =localStorage.getItem('specality');
   return (
     <div className="sign-up-container">
       <Helmet>
-        <title>SignUp - Planical modern template</title>
+        <title>SignUp - Q UP</title>
         <meta property="og:title" content="SignUp - Planical modern template" />
       </Helmet>
       <section className="sign-up-section">
@@ -21,11 +24,10 @@ const SignUp = (props) => {
                 src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Puneet_sq_3be6907e0c.jpg"
                 className="sign-up-image"
               />
-              <header className="sign-up-header">
-                <h1 className="sign-up-heading">Dr.Test Q UP</h1>
-                <span className="sign-up-caption">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+              <header className="home-header">
+                <h1 className="home-heading">{drName}</h1>
+                <span className="home-caption">
+                  {specality}
                 </span>
                 <input
                   type="text"

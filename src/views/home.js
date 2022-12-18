@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './home.css'
-
 const Home = (props) => {
+  const { drName, drId ,specality} = props.match.params;
+  console.log("drName, drId,specality ", drName, drId,specality);
+  var photourl="http://68.183.83.230:8765/provider-service/doctor/" + drId+ "/photo"
+  localStorage.setItem('drName', drName);
+  localStorage.setItem('drId', drId);
+  localStorage.setItem('specality', specality);
   return (
+   
     <div className="home-container">
       <Helmet>
-        <title>Planical modern template</title>
+        <title>Q UP</title>
         <meta property="og:title" content="Planical modern template" />
       </Helmet>
       <section className="home-section">
@@ -18,20 +24,19 @@ const Home = (props) => {
             <main className="home-main">
               <img
                 alt="image"
-                src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Puneet_sq_3be6907e0c.jpg"
+                src={photourl}
                 className="home-image"
               />
               <header className="home-header">
-                <h1 className="home-heading">Dr.Test Q UP</h1>
+                <h1 className="home-heading">{drName}</h1>
                 <span className="home-caption">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  {specality}
                 </span>
               </header>
               <div className="home-buttons">
                 <Link to="/login" className="home-navlink">
                   <div className="home-get-started button">
-                    <span className="home-text">Proceed  for booking</span>
+                    <span className="home-text">Proceed for booking</span>
                   </div>
                 </Link>
               </div>

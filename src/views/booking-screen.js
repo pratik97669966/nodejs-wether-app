@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet'
 import './booking-screen.css'
 
 const BookingScreen = (props) => {
+  var drId =localStorage.getItem('drId');
+  var drName =localStorage.getItem('drName');
   return (
     <div className="booking-screen-container">
       <Helmet>
@@ -26,9 +28,9 @@ const BookingScreen = (props) => {
                     className="booking-screen-avatar"
                   />
                   <div className="booking-screen-details">
-                    <h1 className="booking-screen-author1">Dr.Test Q UP</h1>
+                    <h1 className="booking-screen-author1">{drName}</h1>
                     <label className="booking-screen-position">
-                      General physition
+                      {drId}
                     </label>
                     <div className="booking-screen-author2">
                       <a
